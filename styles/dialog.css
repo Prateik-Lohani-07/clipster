@@ -1,0 +1,57 @@
+#dialog {
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,0.4);
+
+	align-items: center;
+	justify-content: center;
+}
+
+.dialog-content {
+	background: white;
+	padding: 10px;
+	width: 50%;
+	border-radius: 10px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+
+.dialog-btns {
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+}
+
+.dialog-btn {
+	border: 0px;
+	border-radius: 8px;
+	padding: 4px;
+}
+
+.save {
+	background-color: green;
+	color: white;
+}
+
+.cancel {
+	background-color: red;
+	color: white;
+}
+
+#clip-input {
+	resize: vertical;
+	max-height: 100px;
+}
+
+.success {
+	background-color: yellow;
+	color: green;
+}
+
+.error {
+	background-color: red;
+	color: white;
+}
