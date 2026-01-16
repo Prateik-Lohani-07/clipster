@@ -1,0 +1,9 @@
+{
+	"name": "Clipster",
+	"description": "Lightweight, easy-to-use clipboard. Right from your browser.",
+	"version": "1.0",
+	"manifest_version": 3,
+	"action": {
+		"default_popup": "index.html"
+	}
+}
