@@ -1,6 +1,8 @@
 # Clipster
 
-Lightweight, easy-to-use clipboard, right from your browser. Written in plain Javascript.
+Clipster is an easy-to-use lightweight chrome extension, allowing you to use a handy clipboard, right from your browser.
+
+It has a simple 90's websites inspired UI and is written in plain Javascript.
 
 <img src="clipster.png" alt="Snapshot of Clipster as an extension" width="300" />
 
