@@ -50,7 +50,8 @@ function ColorPicker({ id, clipColor, setColor }: ColorPickerProps) {
 							color === COLORS.DEFAULT
 								? 	null
 								:	<button 
-										className={`color-btn rounded-[8px] ${color}-sq ${color === (clipColor ?? '') && 'ring-2 ring-gray-400 ring-opacity-25'}`} 
+										className={`color-btn rounded-[8px] ${color === (clipColor ?? '') && 'ring-2 ring-gray-400 ring-opacity-25'}`} 
+										style={{ backgroundColor: predefinedClipColors[color as COLORS].backgroundColor }}
 										value={color}
 										aria-label={`${color} button for color coding clip`}
 										onClick={() => setColor(color) }
