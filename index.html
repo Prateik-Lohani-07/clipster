@@ -1,29 +1,20 @@
-<html>
-	<head>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-		<link rel="stylesheet" href="styles/styles.css">
-		<link rel="stylesheet" href="styles/clip.css">
-		<link rel="stylesheet" href="styles/buttons.css">
-		<link rel="stylesheet" href="styles/dialog.css">
-	</head>
+<!doctype html>
+<html lang="en">
 
-	<body>
-		<h1 class="header">Clipster <span id="copied-msg" class="hidden">Copied!</span></h1>
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 
-		<section class="clips"></section>
+	<!-- Font Awesome Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-		<div id="dialog" class="hidden">
-			<div class="dialog-content">
-				<textarea id="clip-input"></textarea>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>clipster</title>
+</head>
 
-				<div class="dialog-btns">
-					<button class="btn dialog-btn save" aria-label="Dialog Save Clip">Save</button>
-					<button class="btn dialog-btn cancel" aria-label="Dialog Cancel Clip">Cancel</button>
-				</div>
-			</div>
-		</div>
+<body>
+	<div id="root"></div>
+	<script type="module" src="/src/main.tsx"></script>
+</body>
 
-		<button class="btn add-btn">+</button>
-	</body>
-	<script type="module" src="index.js"></script>
 </html>

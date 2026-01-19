@@ -1,0 +1,18 @@
+.header-font {
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+	font-size: 2em;
+
+	background-color: rgb(48, 48, 0);
+	color: white;
+}
+
+.success {
+	background-color: yellow;
+	color: green;
+}
+
+.error {
+	background-color: red;
+	color: white;
+}

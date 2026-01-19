@@ -1,0 +1,11 @@
+.clip-list {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	width: 400px;
+	
+	/* scroll behaviour */
+	overflow: hidden;
+
+	background-color: rgb(48, 48, 0);
+}

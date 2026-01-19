@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+	--color-primary: rgb(48,48,0);
+	--color-tertiary: rgb(144,238,144);
+	--color-tertiary-dark: rgb(28, 179, 28);
+}
+
+:root {
+	padding: 0;
+	margin: 0;
+	--header-height: 30px;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	max-height: 300px;
+}
+
+
+.hidden {
+	display: none;
+}
+
+.flex {
+	display: flex;
+}
+
+.clip-input {
+	resize: vertical;
+
+	width: 200px;
+	min-height: 30px;
+	max-height: 90px;
+	padding: 4px;
+	
+	border: solid 1px black;
+}
+
