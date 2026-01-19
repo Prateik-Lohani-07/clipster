@@ -55,7 +55,7 @@ function ClipContainer({ clip }: ClipContainerProps) {
 			{!inEditMode && 
 				<div className='w-full flex flex-row justify-between'>
 					<p 
-						className='clip-content select-none' 
+						className='clip-content select-none text-ellipsis overflow-hidden whitespace-nowrap' 
 						style={
 							styleClipOnHover
 								?	{ color: clipColors.hoverTextColor }
