@@ -11,6 +11,7 @@ interface ColorPickerProps {
 function ColorPicker({ id, clipColor, setColor }: ColorPickerProps) {
 	const checkboxRef = useRef<HTMLInputElement>(null);
 	const [pickDefault, setPickDefault] = useState(clipColor === COLORS.DEFAULT);
+	const [previousColor, setPreviousColor] = useState(clipColor);
 
 	return (
 		<div className='bg-white p-[10px] h-full'>
@@ -28,11 +29,13 @@ function ColorPicker({ id, clipColor, setColor }: ColorPickerProps) {
 					onChange={() => {
 						if (checkboxRef.current) {
 							if (checkboxRef.current.checked) {
+								setPreviousColor(clipColor);
 								setPickDefault(true);
 								setColor(COLORS.DEFAULT);
 							}
 							else {
 								setPickDefault(false);
+								setColor(previousColor);
 							} 
 						}
 					}}
