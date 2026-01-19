@@ -80,7 +80,7 @@ function ClipContainer({ clip }: ClipContainerProps) {
 					<div className='w-full flex flex-row justify-start'>
 						<textarea 
 							name="clip-input" 
-							className="resize-x w-[150px] max-w-[230px] bg-white text-black p-[10px] border-r border-black"
+							className="resize-none min-w-[240px] bg-white text-black p-[10px] border-r border-black"
 							value={clipInput}
 							onChange={(e) => setClipInput(e.target.value)}
 						/>
