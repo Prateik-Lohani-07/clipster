@@ -5,15 +5,6 @@ export interface ClipColor {
 	hoverTextColor: string;
 }
 
-export const preDefinedColors = { 
-	red: "#ff0000", 
-	blue: "#0000ff", 
-	yellow: "#ffff00", 
-	orange: "#ffa500", 
-	green: "#00ff00", 
-	black: "#000000",
-};
-
 export const COLORS = {
 	DEFAULT: 'default',
 	RED: 'red',
