@@ -1,10 +1,4 @@
-export function sanitizeText(input: string) {
+export function sanitizeText(input: string): string {
 	if (typeof input !== "string") return "";
-
-	return input
-		.replace(/&/g, "&amp;")
-		.replace(/</g, "&lt;")
-		.replace(/>/g, "&gt;")
-		.replace(/"/g, "&quot;")
-		.replace(/'/g, "&#39;");
+	return input.replace(/<\/?[^>]+(>|$)/g, "");
 }
