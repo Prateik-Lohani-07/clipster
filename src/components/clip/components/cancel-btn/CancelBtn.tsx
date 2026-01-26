@@ -1,12 +1,12 @@
 import "./cancelBtn.css";
 
 interface CancelBtnProps {
-	setInEditMode: Function;
+	onCancel: () => void;
 }
 
-function CancelBtn({ setInEditMode }: CancelBtnProps) {
+function CancelBtn({ onCancel }: CancelBtnProps) {
 	return (
-		<button className='btn clip-btn cancel-btn' onClick={() => setInEditMode(false)}>
+		<button className='btn clip-btn cancel-btn' onClick={onCancel}>
 			<i className='fa-solid fa-x'></i>
 		</button>
 	)

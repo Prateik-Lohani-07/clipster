@@ -35,6 +35,11 @@ function ClipContainer({ clip }: ClipContainerProps) {
 		notify({ message: "Copied!", type: 'info' });
 	};
 
+	const cancelEdits = () => {
+		setInEditMode(false);
+		setClipInput(content);
+	}
+
 	const styleClipOnHover = !inEditMode && hoverOnClip;
 	const clipColors = getClipColors(color);
 
@@ -92,7 +97,7 @@ function ClipContainer({ clip }: ClipContainerProps) {
 
 					<div className='h-full flex flex-col !w-[50px]'>
 						<SaveBtn id={id} clipInput={clipInput} color={color} setInEditMode={setInEditMode} />
-						<CancelBtn setInEditMode={setInEditMode} />
+						<CancelBtn onCancel={cancelEdits} />
 					</div>
 				</div>
 			}
