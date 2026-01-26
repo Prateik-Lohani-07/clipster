@@ -1,5 +1,7 @@
 # Clipster
 
+## Overview
+
 Clipster is an easy-to-use, lightweight clipboard, provided as a chrome extension.
 
 It has a simple 90's websites inspired UI.
@@ -7,7 +9,7 @@ Built with: React + Typescript + Tailwind.
 
 <img src="clipster.png" alt="Snapshot of Clipster as an extension" width="300" class="self-center" />
 
-### Features:
+## Features
 
 1. **Local Storage**: Clipster stores text right in your browser, in your local storage. 
 
