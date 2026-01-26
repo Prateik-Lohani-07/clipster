@@ -5,7 +5,6 @@ import Header from './components/header/Header'
 import AddDialog from './components/add-dialog/AddDialog';
 import { fetchClipsterData, storeClipsterData } from './services/ClipService';
 import { ClipDispatchContext, ClipsContext } from './context/ClipsContextProvider';
-import NoClips from './components/no-clips/NoClips';
 
 function App() {
 	const [showAddClipDialog, setShowAddClipDialog] = useState(false);
@@ -23,14 +22,10 @@ function App() {
 		storeClipsterData(clipsterData)
 	}, [clipsterData]);
 
-	const clips = clipsterData.clips;
-
 	return (
 		<main className='main-container'>
 			<Header />
-
-			{clips.length > 0 && <ClipList clips={clips} />}
-			{clips.length === 0 && <NoClips />}
+			<ClipList/>
 
 			<button 
 				className="btn border border-black w-full h-[50px] bg-tertiary font-semibold text-[1.5em] hover:bg-tertiary-dark hover:text-white" 

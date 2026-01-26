@@ -10,7 +10,7 @@ import { NotificationDispatchContext } from '../../context/NotificationContextPr
 import { getClipColors } from '../../utils/clipColor';
 
 interface ClipContainerProps {
-	clip: Clip,
+	clip: Clip;
 }
 
 function ClipContainer({ clip }: ClipContainerProps) {
@@ -42,7 +42,7 @@ function ClipContainer({ clip }: ClipContainerProps) {
 		<div 
 			id={id.toString()} 
 
-			className='clip cursor-pointer'
+			className='flex-1 h-full flex flex-row shrink-0 justify-between cursor-pointer overflow-hidden'
 			style={
 				styleClipOnHover 
 					? { backgroundColor: clipColors.hoverBackgroundColor }
@@ -53,9 +53,9 @@ function ClipContainer({ clip }: ClipContainerProps) {
 			onMouseOut={() => setHoverOnClip(false)}
 		>
 			{!inEditMode && 
-				<div className='w-full flex flex-row justify-between'>
+				<div className='w-full min-w-0 flex flex-row justify-between'>
 					<p 
-						className='clip-content select-none text-ellipsis overflow-hidden whitespace-nowrap' 
+						className='flex-1 min-w-0 m-0 p-[10px] select-none text-ellipsis overflow-hidden whitespace-nowrap' 
 						style={
 							styleClipOnHover
 								?	{ color: clipColors.hoverTextColor }
@@ -67,7 +67,7 @@ function ClipContainer({ clip }: ClipContainerProps) {
 					</p>
 
 					{hoverOnClip && (
-						<div className='h-full flex flex-col w-[50px]'>
+						<div className='h-full flex flex-col w-[50px] shrink-0'>
 							<EditBtn setInEditMode={setInEditMode} />
 							<DeleteBtn id={id} />
 						</div>

@@ -4,6 +4,7 @@
 	--color-primary: rgb(48,48,0);
 	--color-tertiary: rgb(144,238,144);
 	--color-tertiary-dark: rgb(28, 179, 28);
+	--header-height: 30px;
 }
 
 :root {

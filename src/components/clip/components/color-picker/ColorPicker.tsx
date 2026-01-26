@@ -16,7 +16,7 @@ function ColorPicker({ id, clipColor, setColor }: ColorPickerProps) {
 	return (
 		<div className='bg-white p-[10px] h-full'>
 			<div className='flex flex-row gap-1 items-center'>
-				<label className='custom-color-check-label' htmlFor={`custom-color-checked-${id}`}>
+				<label className='text-black select-none tracking-tighter whitespace-nowrap' htmlFor={`custom-color-checked-${id}`}>
 					Default Color:
 				</label>
 				

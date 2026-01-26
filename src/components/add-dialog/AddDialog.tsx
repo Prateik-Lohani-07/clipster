@@ -40,7 +40,7 @@ function AddDialog({ setShowAddClipDialog }: AddDialogProps) {
 	};
 
 	return (
-		<div id="dialog">
+		<div id="dialog" className="fixed inset-0 top-[var(--header-height)] flex items-center justify-center bg-[rgb(0,0,0,0.4)]">
 			<div className="dialog-content">
 				<textarea 
 					className="clip-input" 
