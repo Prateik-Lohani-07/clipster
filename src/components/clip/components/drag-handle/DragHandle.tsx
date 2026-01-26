@@ -7,7 +7,7 @@ interface DragHandleProps {
 function DragHandle({ dragHandleRef }: DragHandleProps) {
 	return (
 		<button
-			className='flex flex-row justify-center items-center border-none bg-transparent cursor-grab active:cursor-grabbing'
+			className='w-6 flex flex-row justify-center items-center border-none bg-transparent cursor-grab active:cursor-grabbing'
 			ref={dragHandleRef}
 		>
 			<i className="fa-solid fa-braille text-white" />
