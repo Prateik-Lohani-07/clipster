@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",
-		"build-watch": "tsc -b && vite build --watch",
+		"build-watch": "vite build --watch",
 		"lint": "eslint .",
 		"preview": "vite preview"
 	},
@@ -19,7 +19,9 @@
 		"tailwindcss": "^4.1.18"
 	},
 	"devDependencies": {
+		"@crxjs/vite-plugin": "^2.3.0",
 		"@eslint/js": "^9.39.1",
+		"@types/chrome": "^0.1.36",
 		"@types/node": "^24.10.1",
 		"@types/react": "^19.2.5",
 		"@types/react-dom": "^19.2.3",
