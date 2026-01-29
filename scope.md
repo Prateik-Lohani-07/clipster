@@ -13,3 +13,4 @@ Features that must be added on a priority basis are:
 3. [:heavy_check_mark:] Move towards typescript: Type safety is nice.
 4. Search: Basic text search, nothing too fancy. MAYBE fuzzy search. Maybe.
 5. General UI improvements
+6. Text expansion with shortcuts
