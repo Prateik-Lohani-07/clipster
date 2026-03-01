@@ -1,6 +1,7 @@
 import { useContext, useEffect, useRef } from "react";
 import "./header.css";
 import { NotificationContext, NotificationDispatchContext } from "../../context/NotificationContextProvider";
+import SidePanelBtn from "./components/SidePanelBtn";
 
 
 function Header() {
@@ -23,13 +24,15 @@ function Header() {
 	}, [hideHeaderMsg]);
 
 	return (
-		<header>
-			<h1 className="header-font h-[var(--header-height)] border-b border-black flex flex-row items-center">
+		<header className="w-full flex flex-row justify-between items-center bg-primary border-b border-black px-2">
+			<h1 className="header-font h-[var(--header-height)] flex flex-row items-center">
 				Clipster 
 				{hideHeaderMsg &&
 					<span id="copied-msg" className={`ml-4 h-full flex flex-row items-center ${hideHeaderMsg.type === "error" ? "error" : "success"}`}>{hideHeaderMsg.message}</span>
 				}
 			</h1>
+
+			<SidePanelBtn />
 		</header>
 	)
 }
