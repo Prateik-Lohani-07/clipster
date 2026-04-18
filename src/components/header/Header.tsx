@@ -1,14 +1,25 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import "./header.css";
 import { NotificationContext, NotificationDispatchContext } from "../../context/NotificationContextProvider";
 import SidePanelBtn from "./components/SidePanelBtn";
 import ClearAllBtn from "./components/ClearAllBtn";
+import { ClipsContext } from "../../context/ClipsContextProvider";
 
+interface HeaderProps {
+	setShowClearAllDialog: Function;
+};
 
-function Header() {
+function Header({ setShowClearAllDialog }: HeaderProps) {
 	const hideHeaderMsg = useContext(NotificationContext);
 	const setNotification = useContext(NotificationDispatchContext);
 	const timeoutRef = useRef<number | null>(null);
+	
+	const clipsterData = useContext(ClipsContext);
+	const [showClearAllBtn, setShowClearAllBtn] = useState(false);
+
+	useEffect(() => {
+		setShowClearAllBtn(clipsterData.clips.length > 0);
+	}, [clipsterData]);
 
 	useEffect(() => {
 		// no notification, no timer
@@ -34,7 +45,7 @@ function Header() {
 			</h1>
 
 			<div className="flex flex-row gap-2">
-				<ClearAllBtn />
+				{showClearAllBtn && <ClearAllBtn setShowClearAllDialog={setShowClearAllDialog} />}
 				<SidePanelBtn />
 			</div>
 		</header>

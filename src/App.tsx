@@ -5,9 +5,12 @@ import Header from './components/header/Header'
 import AddDialog from './components/add-dialog/AddDialog';
 import { fetchClipsterData, storeClipsterData } from './services/ClipService';
 import { ClipDispatchContext, ClipsContext } from './context/ClipsContextProvider';
+import ClearAllDialog from './components/clear-dialog/ClearAllDialog';
 
 function App() {
 	const [showAddClipDialog, setShowAddClipDialog] = useState(false);
+	const [showClearAllDialog, setShowClearAllDialog] = useState(false);
+
 	const dispatch = useContext(ClipDispatchContext);
 	const clipsterData = useContext(ClipsContext);
 
@@ -19,12 +22,12 @@ function App() {
 	}, []);
 
 	useEffect(() => {
-		storeClipsterData(clipsterData)
+		storeClipsterData(clipsterData);
 	}, [clipsterData]);
 
 	return (
 		<main className='main-container'>
-			<Header />
+			<Header setShowClearAllDialog={setShowClearAllDialog} />
 			<ClipList/>
 
 			<button 
@@ -34,6 +37,7 @@ function App() {
 				+
 			</button>
 			{showAddClipDialog && <AddDialog setShowAddClipDialog={setShowAddClipDialog} />}
+			{showClearAllDialog && <ClearAllDialog setShowClearAllDialog={setShowClearAllDialog} />}
 		</main>
 	)
 }
